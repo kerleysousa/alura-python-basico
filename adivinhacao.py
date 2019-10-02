@@ -1,14 +1,17 @@
+import random
+
 print("*********************************")
 print("Bem vindo ao jogo de Adivinhação!")
 print("*********************************")
 
-numero_secreto = 42
+numero_secreto = random.randrange(1,100);
 
 contador = 1
 total_de_tentativas = 3
 
 for contador in range(1, total_de_tentativas+1):
 
+    print(numero_secreto)
     print("Tentativa {} de {}".format(contador, total_de_tentativas))
     chute_str = input("Digite um número entre 1 e 100: ")
     chute = int(chute_str)
