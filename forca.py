@@ -7,13 +7,12 @@ def jogar():
     palavra_secreta = "banana"
     letras_acertadas = ["_","_","_","_","_","_"]
 
-    enforcou = False
     acertou = False
     erros = 0
 
     print(letras_acertadas)
 
-    while not enforcou and not acertou:
+    while(True):
         chute = input("Qual a letra? ")
         chute.strip().lower()
         index = 0
@@ -27,11 +26,15 @@ def jogar():
             erros += 1
             print("Você errou! Restam {} tentativas".format(6-erros))
 
-        enforcou = erros == 6
-        acertou = not "_" in letras_acertadas
+        if(erros == 6):
+            break
+        if(not "_" in letras_acertadas):
+            acertou = True
+            break
+
         print(letras_acertadas)
 
-    if (acertou):
+    if (True):
         print("Você ganhou")
     else:
         print("Você perdeu")
