@@ -4,11 +4,9 @@ def jogar():
     print("***Bem vindo ao jogo de Forca!***")
     print("*********************************")
 
-    palavra_secreta = "sim"
-    letras_acertadas = []
+    palavra_secreta = "Teste"
+    letras_acertadas = ["_" for letras in palavra_secreta]
 
-    for letras in palavra_secreta:
-        letras_acertadas.append("_")
 
     acertou = False
     erros = 0
