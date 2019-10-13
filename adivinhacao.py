@@ -23,7 +23,6 @@ def jogar():
 
     for contador in range(1, total_de_tentativas+1):
 
-        print(numero_secreto)
         print("Tentativa {} de {}".format(contador, total_de_tentativas))
         chute_str = input("Digite um número entre 1 e 100: ")
         chute = int(chute_str)
